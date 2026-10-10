@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ifa Sweet Cakery - Toko kue & patisserie lezat buatan tangan dengan aneka varian brownies, cheesecake, mille crepe, tiramisu, dan strawberry shortcake segar. Pesan mudah via WhatsApp!">
+  <title>Ifa Sweet Cakery — Artisan Cake & Patisserie</title>
+  
+  <!-- Google Fonts: Playfair Display (Judul Elegan) & Poppins (Teks Modern & Bersih) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome untuk Icon yang Cantik -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- File CSS Eksternal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== 1. NAVBAR ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Logo Toko Estetik -->
+      <a href="#beranda" class="logo" id="brand-logo">
+        <span class="logo-icon">🍰</span>
+        <span class="logo-text">Ifa's <span>Sweet Cakery</span></span>
+      </a>
+
+      <!-- Menu Navigasi -->
+      <nav class="nav-links" id="nav-menu">
+        <a href="#beranda" class="nav-item active">Beranda</a>
+        <a href="#produk" class="nav-item">Menu Kue</a>
+        <a href="#keranjang" class="nav-item cart-nav-btn" id="nav-cart-btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Keranjang</span>
+          <span class="cart-badge" id="cart-badge-count">0</span>
+        </a>
+      </nav>
+
+      <!-- Tombol Hamburger (Untuk Tampilan HP) -->
+      <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Buka Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 2. HERO / BERANDA ==================== -->
+    <section class="hero-section" id="beranda">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="hero-tagline">✨ Homemade with Love by Ifa</span>
+          <h1 class="hero-title">Temukan Kue <span>Favoritmu</span></h1>
+          <p class="hero-desc">
+            Nikmati manisnya kebahagiaan dari dapur <strong>Ifa Sweet Cakery</strong>. Dibuat fresh setiap hari dengan bahan-bahan premium pilihan dan sentuhan rasa istimewa.
+          </p>
+          <div class="hero-buttons">
+            <a href="#produk" class="btn btn-primary" id="btn-lihat-produk">
+              <i class="fa-solid fa-cake-candles"></i> Lihat Menu Pilihan
+            </a>
+            <a href="#keranjang" class="btn btn-secondary">
+              <i class="fa-solid fa-bag-shopping"></i> Cek Keranjang
+            </a>
+          </div>
+
+          <div class="hero-features">
+            <div class="feature-pill">
+              <i class="fa-solid fa-heart"></i>
+              <span>100% Halal & Premium</span>
+            </div>
+            <div class="feature-pill">
+              <i class="fa-solid fa-truck-fast"></i>
+              <span>Pesan Cepat via WA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="image-bubble bubble-1"></div>
+          <div class="image-bubble bubble-2"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" 
+            alt="Ifa Sweet Cakery Showcase" 
+            class="hero-img"
+          >
+          <div class="floating-badge">
+            <span class="badge-icon">⭐</span>
+            <div>
+              <strong>4.9 / 5.0 Rating</strong>
+              <small>Favorit 1.500+ Pelanggan</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. DAFTAR PRODUK ==================== -->
+    <section class="products-section" id="produk">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Koleksi Spesial Dapur Ifa</span>
+          <h2 class="section-title">Aneka Kue & Patisserie</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <!-- Wadah Kartu Produk (Diisi otomatis lewat script.js) -->
+        <div class="products-grid" id="products-container">
+          <!-- 8 Produk akan dirender oleh JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. KERANJANG BELANJA ==================== -->
+    <section class="cart-section" id="keranjang">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Pesanan Anda</span>
+          <h2 class="section-title">Keranjang Belanja</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="cart-wrapper">
+          <!-- Bagian Kiri: List Item Keranjang -->
+          <div class="cart-items-card">
+            <div class="cart-card-header">
+              <h3><i class="fa-solid fa-basket-shopping"></i> Daftar Kue yang Dipilih</h3>
+              <button class="btn-clear" id="btn-clear-cart" title="Kosongkan Keranjang">
+                <i class="fa-solid fa-trash-can"></i> Kosongkan
+              </button>
+            </div>
+
+            <!-- List Item yang diisi via Javascript -->
+            <div class="cart-items-list" id="cart-items-container">
+              <!-- Item keranjang akan ditampilkan di sini -->
+            </div>
+          </div>
+
+          <!-- Bagian Kanan: Ringkasan & Checkout WhatsApp -->
+          <div class="cart-summary-card">
+            <h3 class="summary-title">Ringkasan Pesanan</h3>
+
+            <div class="summary-row">
+              <span>Total Item:</span>
+              <strong id="summary-total-items">0 kue</strong>
+            </div>
+
+            <div class="summary-row total-row">
+              <span>Total Harga:</span>
+              <strong class="total-price" id="summary-total-price">Rp0</strong>
+            </div>
+
+            <!-- Catatan Pemesanan Singkat -->
+            <div class="order-notes">
+              <label for="customer-name"><i class="fa-solid fa-user"></i> Nama Pemesan (Opsional):</label>
+              <input type="text" id="customer-name" placeholder="Contoh: Sarah / Budi" class="form-input">
+              
+              <label for="customer-note"><i class="fa-solid fa-pen"></i> Catatan Tambahan (Opsional):</label>
+              <textarea id="customer-note" rows="2" placeholder="Contoh: Tambahkan kartu ucapan ulang tahun..." class="form-input"></textarea>
+            </div>
+
+            <!-- Tombol Order WhatsApp -->
+            <button class="btn btn-whatsapp" id="btn-checkout-wa">
+              <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp
+            </button>
+
+            <p class="wa-helper-text">
+              <i class="fa-solid fa-shield-heart"></i> Pesanan akan otomatis dikirimkan ke WhatsApp Kak Ifa untuk konfirmasi jadwal & pembayaran.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#beranda" class="logo">
+          <span class="logo-icon">🍰</span>
+          <span class="logo-text">Ifa's <span>Sweet Cakery</span></span>
+        </a>
+        <p>Menyajikan kehangatan dan kelezatan kue manis buatan tangan dengan sepenuh hati.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigasi Cepat</h4>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#produk">Daftar Menu</a></li>
+          <li><a href="#keranjang">Keranjang Belanja</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Hubungi Ifa</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Jl. Mawar Manis No. 12, Jakarta</p>
+        <p><i class="fa-solid fa-clock"></i> Buka Setiap Hari: 08.00 - 21.00 WIB</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ifa Sweet Cakery. Dibuat dengan ❤️ untuk pecinta kue lezat.</p>
+    </div>
+  </footer>
+
+  <!-- Notifikasi Toast (Pop up saat tambah kue) -->
+  <div class="toast-notification" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-message">Kue berhasil ditambahkan!</span>
+  </div>
+
+  <!-- File JavaScript Eksternal -->
+  <script src="script.js"></script>
+</body>
+</html>
